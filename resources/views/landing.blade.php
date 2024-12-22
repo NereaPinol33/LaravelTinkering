@@ -17,7 +17,7 @@
             <h1 class="text-5xl font-extrabold mb-6">Welcome to {{ config('app.name') }}</h1>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Discover the best movies, your favorite actors, and more! Dive
                 into the world of cinema.</p>
-            <a href="#featured"
+            <a href="https://github.com/NereaPinol33/LaravelTinkering"
                 class="inline-block bg-white text-black px-6 py-3 rounded-lg text-lg font-medium hover:bg-gray-200 transition duration-300">
                 View Github Repository
             </a>
