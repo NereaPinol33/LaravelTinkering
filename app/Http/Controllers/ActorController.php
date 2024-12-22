@@ -29,6 +29,8 @@ class ActorController extends Controller
         $actor->name = $request->name;
         $actor->birth_date = $request->birth_date;
         $actor->biography = $request->biography;
+        $actor->gender = $request->gender;
+        $actor->image = $request->image;
         $actor->save();
 
         session()->flash('success', 'Actor created successfully!');
@@ -60,6 +62,8 @@ class ActorController extends Controller
         $actor->name = $request->name;
         $actor->birth_date = $request->birth_date;
         $actor->biography = $request->biography;
+        $actor->gender = $request->gender;
+        $actor->image = $request->image;
         $actor->save();
 
         session()->flash('success', 'Actor updated successfully!');
