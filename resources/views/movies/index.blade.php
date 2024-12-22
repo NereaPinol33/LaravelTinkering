@@ -1,4 +1,8 @@
-<x-layout title="Movies List">
+<x-layout>
+    <x-slot:title>
+        Movies List
+    </x-slot>
+
     <div class="flex justify-between items-center mb-6">
         <!-- Page Title -->
         <h1 class="text-4xl font-semibold text-gray-800">Movies List</h1>

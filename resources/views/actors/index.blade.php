@@ -1,4 +1,8 @@
-<x-layout title="Actors List">
+<x-layout>
+    <x-slot:title>
+        Actors List
+    </x-slot>
+    
     <div class="flex justify-between items-center mb-6">
         <!-- Page Title -->
         <h1 class="text-4xl font-semibold text-gray-800">Actors List</h1>
