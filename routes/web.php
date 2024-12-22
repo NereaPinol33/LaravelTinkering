@@ -18,7 +18,7 @@ Route::get('/', function () {
         'movies' => App\Models\Movie::all(),
         'actors' => App\Models\Actor::all(),
     ]);
-});
+})->name('landing');
 
 /* Movies routes */
 

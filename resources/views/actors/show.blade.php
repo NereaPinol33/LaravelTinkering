@@ -31,7 +31,7 @@
                     <p class="text-white text-sm">{{ Str::limit($movie->description, 120) }}</p>
                     <p class="text-white text-sm"><strong>Director:</strong> {{ $movie->director }}</p>
                     <p class="text-white text-sm"><strong>Year:</strong> {{ $movie->year }}</p>
-                    <a href="/movies/{{ $movie->id }}"
+                    <a href="{{ route('movies.show', $movie->id) }}"
                         class="mt-4 inline-block bg-white px-6 py-2 rounded-lg text-lg font-medium hover:bg-gray-100">
                         View Movie
                     </a>
@@ -42,7 +42,7 @@
 
     <!-- Back Button -->
     <section class="container mx-auto text-center mb-12">
-        <a href="/actors"
+        <a href="{{ route('actors.index') }}"
             class="inline-block bg-black text-white px-6 py-2 rounded-lg text-lg font-medium hover:bg-gray-900 transition duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-5 h-5 inline">
