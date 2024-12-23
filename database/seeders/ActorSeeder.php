@@ -12,7 +12,6 @@ class ActorSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create actors
         Actor::create([
             'name' => 'Morgan Freeman',
             'birth_date' => '1937-06-01',

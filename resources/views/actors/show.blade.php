@@ -2,14 +2,13 @@
     <x-slot:title>
         {{ $actor->name }}
     </x-slot>
-
     <!-- Actor Details Section -->
     <section class="bg-black p-10 rounded-lg shadow-xl mb-12">
         <div class="container mx-auto text-white text-center">
             <h2 class="text-5xl font-bold mb-6">{{ $actor->name }}</h2>
 
             <!-- Actor Name and Image -->
-                <img src="{{ $actor->image }}" alt="{{ $actor->name }} Image" class="w-48 mx-auto rounded-lg mb-6">
+            <img src="{{ $actor->image }}" alt="{{ $actor->name }} Image" class="w-48 mx-auto rounded-lg mb-6">
 
             <p class="text-xl mb-6 max-w-3xl mx-auto">{{ $actor->biography }}</p>
             <div class="flex justify-center space-x-8 text-lg">
@@ -17,7 +16,6 @@
             </div>
         </div>
     </section>
-
     <!-- Movies Section -->
     <section class="container mx-auto py-12">
         <h3 class="text-3xl font-medium mb-8 text-black text-center">Movies Featuring {{ $actor->name }}</h3>
@@ -39,7 +37,6 @@
             @endforeach
         </div>
     </section>
-
     <!-- Back Button -->
     <section class="container mx-auto text-center mb-12">
         <a href="{{ route('actors.index') }}"
@@ -48,7 +45,6 @@
                 stroke="currentColor" class="w-5 h-5 inline">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
             </svg>
-
             Back to Actor List
         </a>
     </section>

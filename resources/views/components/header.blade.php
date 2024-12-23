@@ -4,7 +4,6 @@
         <h1 class="text-2xl font-bold">
             <a href="{{ route('landing') }}"  class="hover:text-gray-200">MoviesPHP</a>
         </h1>
-
         <!-- Navigation -->
         <nav class="flex gap-6 text-lg">
             <a href="{{ route('landing') }}"

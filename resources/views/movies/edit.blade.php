@@ -2,19 +2,16 @@
     <x-slot:title>
         Edit Movie: {{ $movie->title }}
     </x-slot>
-
     <!-- Edit Movie Form Section -->
     <section class="bg-white p-6 rounded-lg shadow-md mb-8">
         <div class="container mx-auto">
             <div class="flex items-center mb-4">
                 <h2 class="text-2xl font-semibold text-gray-800 text-center">Edit Movie: {{ $movie->title }}</h2>
             </div>
-
             <!-- Form to Edit Movie -->
             <form action="{{ route('movies.update', $movie->id) }}" method="POST">
                 @csrf
                 @method('PUT')
-
                 <!-- Movie Title -->
                 <div class="mb-4">
                     <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
@@ -25,7 +22,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Movie Description -->
                 <div class="mb-4">
                     <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
@@ -36,7 +32,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Movie Director -->
                 <div class="mb-4">
                     <label for="director" class="block text-sm font-medium text-gray-700">Director</label>
@@ -47,7 +42,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Movie Year -->
                 <div class="mb-4">
                     <label for="year" class="block text-sm font-medium text-gray-700">Year</label>
@@ -58,7 +52,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Movie Genre -->
                 <div class="mb-4">
                     <label for="genre" class="block text-sm font-medium text-gray-700">Genre</label>
@@ -69,7 +62,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Movie Image -->
                 <div class="mb-4">
                     <label for="image" class="block text-sm font-medium text-gray-700">Image URL</label>
@@ -80,7 +72,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Actor Selection -->
                 <div class="mb-4">
                     <label for="actors" class="block text-sm font-medium text-gray-700">Select Actors</label>
@@ -98,7 +89,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Submit Button -->
                 <div class="flex justify-end">
                     <a href="{{ route('movies.index') }}"
@@ -117,7 +107,6 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                         </svg>
-
                         Update Movie
                     </button>
                 </div>

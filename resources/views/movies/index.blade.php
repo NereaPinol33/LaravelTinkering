@@ -2,11 +2,9 @@
     <x-slot:title>
         Movies List
     </x-slot>
-
     <div class="flex justify-between items-center mb-6">
         <!-- Page Title -->
         <h1 class="text-4xl font-semibold text-gray-800">Movies List</h1>
-
         <!-- Add Movie Button -->
         <a href="{{ route('movies.create') }}"
             class="inline-block bg-black text-white py-2 px-6 rounded-lg text-lg font-medium hover:bg-gray-900 transition duration-300">
@@ -17,7 +15,6 @@
             Add Movie
         </a>
     </div>
-
     <!-- Flash Message -->
     @if (session('success'))
         <div class="bg-green-600 text-white p-4 mb-6 rounded-lg flex items-center space-x-2">
@@ -28,7 +25,6 @@
             <span>{{ session('success') }}</span>
         </div>
     @endif
-
     <!-- Movies Table -->
     <div class="bg-white shadow rounded-lg overflow-x-auto">
         <table class="min-w-full border-collapse">
@@ -88,7 +84,6 @@
                                 </button>
                             </form>
                         </td>
-
                     </tr>
                 @endforeach
                 @if ($movies->isEmpty())

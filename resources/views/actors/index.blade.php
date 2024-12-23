@@ -2,7 +2,6 @@
     <x-slot:title>
         Actors List
     </x-slot>
-    
     <div class="flex justify-between items-center mb-6">
         <!-- Page Title -->
         <h1 class="text-4xl font-semibold text-gray-800">Actors List</h1>
@@ -17,7 +16,6 @@
             Add Actor
         </a>
     </div>
-
     <!-- Flash Message -->
     @if (session('success'))
         <div class="bg-green-600 text-white p-4 mb-6 rounded-lg flex items-center space-x-2">
@@ -28,7 +26,6 @@
             <span>{{ session('success') }}</span>
         </div>
     @endif
-
     <!-- Actors Table -->
     <div class="bg-white shadow rounded-lg overflow-x-auto">
         <table class="min-w-full border-collapse">

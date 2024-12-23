@@ -11,18 +11,14 @@
 </head>
 
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
-
     <!-- Header Section -->
     <x-header />
-
     <!-- Main Content Section -->
     <main class="container mx-auto py-16 px-8 flex-grow">
         {{ $slot }}
     </main>
-
     <!-- Footer Section -->
     <x-footer />
-
 </body>
 
 </html>

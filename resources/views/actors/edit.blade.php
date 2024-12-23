@@ -2,19 +2,16 @@
     <x-slot:title>
         Edit Actor: {{ $actor->name }}
     </x-slot>
-
     <!-- Edit Actor Form Section -->
     <section class="bg-white p-6 rounded-lg shadow-md mb-8">
         <div class="container mx-auto">
             <div class="flex items-center mb-4">
                 <h2 class="text-2xl font-semibold text-gray-800 text-center">Edit Actor: {{ $actor->name }}</h2>
             </div>
-
             <!-- Form to Edit Actor -->
             <form action="{{ route('actors.update', $actor->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-
                 <!-- Actor Name -->
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
@@ -25,7 +22,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Actor Birth Date -->
                 <div class="mb-4">
                     <label for="birth_date" class="block text-sm font-medium text-gray-700">Birth Date</label>
@@ -36,7 +32,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Actor Biography -->
                 <div class="mb-4">
                     <label for="biography" class="block text-sm font-medium text-gray-700">Biography</label>
@@ -47,7 +42,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Actor Gender -->
                 <div class="mb-4">
                     <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
@@ -62,7 +56,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Actor Image -->
                 <div class="mb-4">
                     <label for="image" class="block text-sm font-medium text-gray-700">Image URL</label>
@@ -73,7 +66,6 @@
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
                 <!-- Submit Button -->
                 <div class="flex justify-end">
                     <a href="{{ route('actors.index') }}"

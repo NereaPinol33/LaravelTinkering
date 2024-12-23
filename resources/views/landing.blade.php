@@ -2,7 +2,6 @@
     <x-slot:title>
         Home
     </x-slot>
-
     <!-- Hero Section -->
     <section class="bg-black text-white py-20">
         <div class="container mx-auto text-center">
@@ -23,7 +22,6 @@
             </a>
         </div>
     </section>
-
     <!-- Featured Movies Section -->
     <section id="featured" class="py-16">
         <div class="container mx-auto overflow-hidden">
@@ -43,15 +41,13 @@
             </div>
         </div>
     </section>
-
     <!-- Actors Section -->
     <section class="py-16">
         <div class="container mx-auto">
             <h2 class="text-4xl font-extrabold text-center mb-12 text-black">Meet the Stars</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
                 @foreach ($actors as $actor)
-                    <div
-                        class="bg-white p-6 rounded-lg">
+                    <div class="bg-white p-6 rounded-lg">
                         <img src="{{ $actor->image }}" alt="{{ $actor->name }} Image"
                             class="w-full h-60 object-cover rounded-lg mb-6">
                         <h3 class="text-2xl font-bold text-center text-black mb-4">{{ $actor->name }}</h3>
@@ -67,8 +63,6 @@
             </div>
         </div>
     </section>
-
-
     <!-- Swiper JS Setup -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -97,10 +91,8 @@
             });
         });
     </script>
-
     <!-- Include Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
     <!-- Include Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </x-layout>

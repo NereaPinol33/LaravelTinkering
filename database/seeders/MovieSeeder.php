@@ -13,7 +13,6 @@ class MovieSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create movies
         $movie1 = Movie::create([
             'title' => 'The Shawshank Redemption',
             'description' => 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',
@@ -68,7 +67,6 @@ class MovieSeeder extends Seeder
             'image' => 'https://es.web.img3.acsta.net/c_310_420/img/05/66/05663f00b8b5df58b003aaf5c46ef8ad.jpg',
         ]);
 
-        // Get actors to associate with movies
         $actor1 = Actor::where('name', 'Morgan Freeman')->first();
         $actor2 = Actor::where('name', 'Tim Robbins')->first();
         $actor3 = Actor::where('name', 'Marlon Brando')->first();
@@ -82,7 +80,6 @@ class MovieSeeder extends Seeder
         $actor11 = Actor::where('name', 'John Travolta')->first();
         $actor12 = Actor::where('name', 'Uma Thurman')->first();
 
-        // Attach actors to movies (many-to-many relationship)
         $movie1->actors()->attach([$actor1->id, $actor2->id]);
         $movie2->actors()->attach([$actor3->id, $actor4->id]);
         $movie3->actors()->attach([$actor5->id, $actor6->id]);
